@@ -9,4 +9,4 @@
  3. 使用HLS工具，对其进行优化（如使用pipeline、partition等）。
  
  ### 二、实验记录
-  1.主要的实现在`fpga_lab_2_cnn/conv.cpp`中.测试代码为`fpga_lab2_cnn/conv_test.cpp`.
+ 1.主要的实现在`fpga_lab_2_cnn/conv.cpp`中.测试代码为`fpga_lab2_cnn/conv_test.cpp`.
