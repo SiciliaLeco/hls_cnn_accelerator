@@ -1,0 +1,235 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from conv.cpp:1:
+conv.cpp:199:5: error: use of undeclared identifier 'printf'
+    printf("%d ", result[i][m]);
+    ^
+conv.cpp:200:4: error: use of undeclared identifier 'printf'; did you mean 'wprintf'?
+   printf("!\n");
+   ^~~~~~
+   wprintf
+C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\wchar.h:557:7: note: 'wprintf' declared here
+  int wprintf(const wchar_t * __restrict__ _Format,...);
+      ^
+In file included from conv.cpp:1:
+conv.cpp:200:11: error: cannot initialize a parameter of type 'const wchar_t *' with an lvalue of type 'const char [3]'
+   printf("!\n");
+          ^~~~~
+C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\wchar.h:557:44: note: passing argument to parameter '_Format' here
+  int wprintf(const wchar_t * __restrict__ _Format,...);
+                                           ^
+In file included from conv.cpp:1:
+conv.cpp:205:4: error: use of undeclared identifier 'printf'
+   printf("%d ", outtotal[i]);
+   ^
+4 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 166.871 ; gain = 75.219
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 166.871 ; gain = 75.219
+INFO: [HLS 200-10] Starting code transformations ...
+ERROR: [SYNCHK 200-79] Cannot find the top function 'conv' in the design. Possible causes are: (1) the top function name is misspelled; (2) the top function is nonexistent or declared as static.
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 146.172 ; gain = 54.516
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 146.172 ; gain = 54.516
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 146.172 ; gain = 54.516
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'pool_line_buffer_shift_1_bit' into 'single_conv_test' (conv.cpp:186) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 146.172 ; gain = 54.516
+INFO: [XFORM 203-102] Automatically partitioning small array 'go_up' (conv.cpp:58) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'go_up' (conv.cpp:58) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'pool_line_buffer_shift_1_bit' into 'single_conv_test' (conv.cpp:186) automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_pool_calculate' (conv.cpp:49:5).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_conv_test' (conv.cpp:178:8).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_conv_test' (conv.cpp:183:7).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'conv_line_buffer' in function 'conv_line_buffer_shift_1_bit' (conv.cpp:70:5).
+INFO: [XFORM 203-102] Automatically partitioning small array 'cal_pool' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'cal_pool' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cal_pool' in dimension 2 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:49:5) to (conv.cpp:47:26) in function 'single_pool_calculate'... converting 4 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'single_pool_calculate' into 'single_conv_test' (conv.cpp:191) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 151.820 ; gain = 60.164
+WARNING: [XFORM 203-631] Renaming function 'single_conv_calculate' to 'single_conv_calculat' (conv.cpp:31:25)
+WARNING: [XFORM 203-631] Renaming function 'conv_line_buffer_shift_1_bit' to 'conv_line_buffer_shi' (conv.cpp:59:26)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 164.520 ; gain = 72.863
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'single_conv_test' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'single_conv_calculat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.942 seconds; current allocated memory: 116.553 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.356 seconds; current allocated memory: 116.808 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv_line_buffer_shi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 117.028 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.415 seconds; current allocated memory: 117.284 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'single_conv_test' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.432 seconds; current allocated memory: 117.962 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.462 seconds; current allocated memory: 118.799 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'single_conv_calculat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'single_conv_calculat'.
+INFO: [HLS 200-111]  Elapsed time: 0.673 seconds; current allocated memory: 119.110 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv_line_buffer_shi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_line_buffer_shi'.
+INFO: [HLS 200-111]  Elapsed time: 0.682 seconds; current allocated memory: 119.659 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'single_conv_test' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'single_conv_test/imgtotal' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'single_conv_test/weitotal' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'single_conv_test/outtotal' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'single_conv_test' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_kernel' to 'single_conv_test_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_cal_conv' to 'single_conv_test_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_conv_line_buffer' to 'single_conv_test_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_pool_line_buffer' to 'single_conv_test_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'cal_pool_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cal_pool_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cal_pool_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cal_pool_1_1' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_conv_output' to 'single_conv_test_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'single_conv_test_img' to 'single_conv_test_g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'single_conv_test'.
+INFO: [HLS 200-111]  Elapsed time: 1.262 seconds; current allocated memory: 121.193 MB.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_cud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_dEe_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_eOg_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_fYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'single_conv_test_g8j_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 190.492 ; gain = 98.836
+INFO: [VHDL 208-304] Generating VHDL RTL for single_conv_test.
+INFO: [VLOG 209-307] Generating Verilog RTL for single_conv_test.
+INFO: [HLS 200-112] Total elapsed time: 29.528 seconds; peak allocated memory: 121.193 MB.

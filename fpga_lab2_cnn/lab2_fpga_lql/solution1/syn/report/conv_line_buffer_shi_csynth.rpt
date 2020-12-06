@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv_line_buffer_shi'
+================================================================
+* Date:           Sun Dec  6 11:50:17 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.790|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   66|   66|   66|   66|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   27|   27|         9|          -|          -|     3|    no    |
+        | + Loop 1.1  |    6|    6|         2|          -|          -|     3|    no    |
+        |- Loop 2     |   36|   36|        18|          -|          -|     2|    no    |
+        | + Loop 2.1  |   16|   16|         2|          -|          -|     8|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      0|   252|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|   161|    -|
+|Register         |        -|      -|    179|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|    179|   413|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|      1|     5|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |add_ln68_1_fu_283_p2   |     +    |      0|  0|  15|           5|           5|
+    |add_ln68_fu_269_p2     |     +    |      0|  0|  15|           5|           5|
+    |add_ln70_fu_292_p2     |     +    |      0|  0|  15|           5|           5|
+    |add_ln83_1_fu_397_p2   |     +    |      0|  0|  15|           6|           6|
+    |add_ln83_fu_383_p2     |     +    |      0|  0|  15|           6|           6|
+    |i_10_fu_318_p2         |     +    |      0|  0|  10|           2|           1|
+    |i_fu_186_p2            |     +    |      0|  0|  10|           2|           1|
+    |j_4_fu_367_p2          |     +    |      0|  0|  13|           4|           1|
+    |j_fu_251_p2            |     +    |      0|  0|  10|           2|           1|
+    |sub_ln68_fu_231_p2     |     -    |      0|  0|  15|           5|           5|
+    |icmp_ln63_fu_180_p2    |   icmp   |      0|  0|   8|           2|           2|
+    |icmp_ln65_fu_245_p2    |   icmp   |      0|  0|   8|           2|           2|
+    |icmp_ln76_fu_312_p2    |   icmp   |      0|  0|   9|           2|           3|
+    |icmp_ln78_fu_361_p2    |   icmp   |      0|  0|  11|           4|           5|
+    |icmp_ln80_fu_373_p2    |   icmp   |      0|  0|   9|           4|           3|
+    |or_ln70_fu_200_p2      |    or    |      0|  0|   5|           5|           2|
+    |or_ln81_fu_336_p2      |    or    |      0|  0|   5|           5|           3|
+    |cal_conv_d0            |  select  |      0|  0|  32|           1|          32|
+    |select_ln81_fu_355_p3  |  select  |      0|  0|  32|           1|          32|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      0|  0| 252|          68|         120|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  47|         10|    1|         10|
+    |cal_conv_address0          |  21|          4|    4|         16|
+    |cal_conv_address1          |  15|          3|    4|         12|
+    |conv_line_buffer_address0  |  27|          5|    4|         20|
+    |conv_line_buffer_d0        |  15|          3|   32|         96|
+    |i1_0_reg_158               |   9|          2|    2|          4|
+    |i_0_reg_135                |   9|          2|    2|          4|
+    |j2_0_reg_169               |   9|          2|    4|          8|
+    |j_0_reg_147                |   9|          2|    2|          4|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 161|         33|   55|        174|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |add_ln68_1_reg_468              |   5|   0|    5|          0|
+    |add_ln83_1_reg_514              |   6|   0|    6|          0|
+    |ap_CS_fsm                       |   9|   0|    9|          0|
+    |conv_line_buffer_add_1_reg_487  |   1|   0|    4|          3|
+    |conv_line_buffer_loa_reg_446    |  32|   0|   32|          0|
+    |go_up_0_reg_411                 |  32|   0|   32|          0|
+    |go_up_1_reg_416                 |  32|   0|   32|          0|
+    |i1_0_reg_158                    |   2|   0|    2|          0|
+    |i_0_reg_135                     |   2|   0|    2|          0|
+    |i_10_reg_476                    |   2|   0|    2|          0|
+    |i_reg_424                       |   2|   0|    2|          0|
+    |icmp_ln80_reg_505               |   1|   0|    1|          0|
+    |j2_0_reg_169                    |   4|   0|    4|          0|
+    |j_0_reg_147                     |   2|   0|    2|          0|
+    |j_4_reg_500                     |   4|   0|    4|          0|
+    |j_reg_454                       |   2|   0|    2|          0|
+    |select_ln81_reg_492             |  32|   0|   32|          0|
+    |sub_ln68_reg_434                |   5|   0|    5|          0|
+    |tmp_3_reg_441                   |   1|   0|    1|          0|
+    |tmp_4_reg_459                   |   1|   0|    1|          0|
+    |zext_ln81_reg_481               |   2|   0|    6|          4|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           | 179|   0|  186|          7|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_done                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|data                       |  in |   32|   ap_none  |         data         |    scalar    |
+|conv_line_buffer_address0  | out |    4|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_ce0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_we0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_d0        | out |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_q0        |  in |   32|  ap_memory |   conv_line_buffer   |     array    |
+|cal_conv_address0          | out |    4|  ap_memory |       cal_conv       |     array    |
+|cal_conv_ce0               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_we0               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_d0                | out |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_q0                |  in |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_address1          | out |    4|  ap_memory |       cal_conv       |     array    |
+|cal_conv_ce1               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_we1               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_d1                | out |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_q1                |  in |   32|  ap_memory |       cal_conv       |     array    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+

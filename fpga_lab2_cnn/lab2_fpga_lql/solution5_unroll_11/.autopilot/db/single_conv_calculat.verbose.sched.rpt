@@ -1,0 +1,196 @@
+
+
+================================================================
+== Vivado HLS Report for 'single_conv_calculat'
+================================================================
+* Date:           Sun Dec  6 13:34:25 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution5_unroll_11
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   43|   43|   43|   43|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- single_conv_calculate_label0   |   42|   42|        14|          -|          -|     3|    no    |
+        | + single_conv_calculate_label1  |   12|   12|         4|          -|          -|     3|    no    |
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 
+5 --> 6 
+6 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ans_1 = alloca i32"   --->   Operation 7 'alloca' 'ans_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.66ns)   --->   "store i32 0, i32* %ans_1" [conv.cpp:30]   --->   Operation 8 'store' <Predicate = true> <Delay = 1.66>
+ST_1 : Operation 9 [1/1] (1.66ns)   --->   "br label %1" [conv.cpp:30]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 1.77>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i_0 = phi i2 [ 0, %0 ], [ %i, %single_conv_calculate_label0_end ]"   --->   Operation 10 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.93ns)   --->   "%icmp_ln30 = icmp eq i2 %i_0, -1" [conv.cpp:30]   --->   Operation 11 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.58ns)   --->   "%i = add i2 %i_0, 1" [conv.cpp:30]   --->   Operation 13 'add' 'i' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln30, label %4, label %single_conv_calculate_label0_begin" [conv.cpp:30]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([29 x i8]* @p_str) nounwind" [conv.cpp:31]   --->   Operation 15 'specloopname' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([29 x i8]* @p_str) nounwind" [conv.cpp:31]   --->   Operation 16 'specregionbegin' 'tmp' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln34 = zext i2 %i_0 to i5" [conv.cpp:34]   --->   Operation 17 'zext' 'zext_ln34' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_s = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %i_0, i2 0)" [conv.cpp:34]   --->   Operation 18 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln34_1 = zext i4 %tmp_s to i5" [conv.cpp:34]   --->   Operation 19 'zext' 'zext_ln34_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.77ns)   --->   "%sub_ln34 = sub i5 %zext_ln34_1, %zext_ln34" [conv.cpp:34]   --->   Operation 20 'sub' 'sub_ln34' <Predicate = (!icmp_ln30)> <Delay = 1.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (1.66ns)   --->   "br label %2" [conv.cpp:32]   --->   Operation 21 'br' <Predicate = (!icmp_ln30)> <Delay = 1.66>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%ans_1_load = load i32* %ans_1" [conv.cpp:37]   --->   Operation 22 'load' 'ans_1_load' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "ret i32 %ans_1_load" [conv.cpp:37]   --->   Operation 23 'ret' <Predicate = (icmp_ln30)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.01>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%j_0 = phi i2 [ 0, %single_conv_calculate_label0_begin ], [ %j, %3 ]"   --->   Operation 24 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.93ns)   --->   "%icmp_ln32 = icmp eq i2 %j_0, -1" [conv.cpp:32]   --->   Operation 25 'icmp' 'icmp_ln32' <Predicate = true> <Delay = 0.93> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%empty_203 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind"   --->   Operation 26 'speclooptripcount' 'empty_203' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (1.58ns)   --->   "%j = add i2 %j_0, 1" [conv.cpp:32]   --->   Operation 27 'add' 'j' <Predicate = true> <Delay = 1.58> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %icmp_ln32, label %single_conv_calculate_label0_end, label %3" [conv.cpp:32]   --->   Operation 28 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln34_2 = zext i2 %j_0 to i5" [conv.cpp:34]   --->   Operation 29 'zext' 'zext_ln34_2' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (1.86ns)   --->   "%add_ln34 = add i5 %sub_ln34, %zext_ln34_2" [conv.cpp:34]   --->   Operation 30 'add' 'add_ln34' <Predicate = (!icmp_ln32)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln34 = sext i5 %add_ln34 to i64" [conv.cpp:34]   --->   Operation 31 'sext' 'sext_ln34' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%cal_conv_addr = getelementptr [9 x i32]* @cal_conv, i64 0, i64 %sext_ln34" [conv.cpp:34]   --->   Operation 32 'getelementptr' 'cal_conv_addr' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%kernel_addr = getelementptr [9 x i32]* @kernel, i64 0, i64 %sext_ln34" [conv.cpp:34]   --->   Operation 33 'getelementptr' 'kernel_addr' <Predicate = (!icmp_ln32)> <Delay = 0.00>
+ST_3 : Operation 34 [2/2] (2.15ns)   --->   "%cal_conv_load = load i32* %cal_conv_addr, align 4" [conv.cpp:34]   --->   Operation 34 'load' 'cal_conv_load' <Predicate = (!icmp_ln32)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 35 [2/2] (2.15ns)   --->   "%kernel_load = load i32* %kernel_addr, align 4" [conv.cpp:34]   --->   Operation 35 'load' 'kernel_load' <Predicate = (!icmp_ln32)> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%empty_204 = call i32 (...)* @_ssdm_op_SpecRegionEnd([29 x i8]* @p_str, i32 %tmp) nounwind" [conv.cpp:36]   --->   Operation 36 'specregionend' 'empty_204' <Predicate = (icmp_ln32)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "br label %1" [conv.cpp:30]   --->   Operation 37 'br' <Predicate = (icmp_ln32)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 38 [1/2] (2.15ns)   --->   "%cal_conv_load = load i32* %cal_conv_addr, align 4" [conv.cpp:34]   --->   Operation 38 'load' 'cal_conv_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+ST_4 : Operation 39 [1/2] (2.15ns)   --->   "%kernel_load = load i32* %kernel_addr, align 4" [conv.cpp:34]   --->   Operation 39 'load' 'kernel_load' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 9> <RAM>
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 40 [1/1] (8.47ns)   --->   "%mul_ln34 = mul nsw i32 %kernel_load, %cal_conv_load" [conv.cpp:34]   --->   Operation 40 'mul' 'mul_ln34' <Predicate = true> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.36>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%ans_1_load_1 = load i32* %ans_1" [conv.cpp:34]   --->   Operation 41 'load' 'ans_1_load_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([29 x i8]* @p_str1) nounwind" [conv.cpp:33]   --->   Operation 42 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (2.70ns)   --->   "%ans = add nsw i32 %ans_1_load_1, %mul_ln34" [conv.cpp:34]   --->   Operation 43 'add' 'ans' <Predicate = true> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 44 [1/1] (1.66ns)   --->   "store i32 %ans, i32* %ans_1" [conv.cpp:32]   --->   Operation 44 'store' <Predicate = true> <Delay = 1.66>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "br label %2" [conv.cpp:32]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	'alloca' operation ('ans') [3]  (0 ns)
+	'store' operation ('store_ln30', conv.cpp:30) of constant 0 on local variable 'ans' [4]  (1.66 ns)
+
+ <State 2>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', conv.cpp:30) [7]  (0 ns)
+	'sub' operation ('sub_ln34', conv.cpp:34) [18]  (1.78 ns)
+
+ <State 3>: 4.01ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', conv.cpp:32) [21]  (0 ns)
+	'add' operation ('add_ln34', conv.cpp:34) [30]  (1.86 ns)
+	'getelementptr' operation ('cal_conv_addr', conv.cpp:34) [32]  (0 ns)
+	'load' operation ('cal_conv_load', conv.cpp:34) on array 'cal_conv' [34]  (2.15 ns)
+
+ <State 4>: 2.15ns
+The critical path consists of the following:
+	'load' operation ('cal_conv_load', conv.cpp:34) on array 'cal_conv' [34]  (2.15 ns)
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln34', conv.cpp:34) [36]  (8.47 ns)
+
+ <State 6>: 4.37ns
+The critical path consists of the following:
+	'load' operation ('ans_1_load_1', conv.cpp:34) on local variable 'ans' [27]  (0 ns)
+	'add' operation ('ans', conv.cpp:34) [37]  (2.7 ns)
+	'store' operation ('store_ln32', conv.cpp:32) of variable 'ans', conv.cpp:34 on local variable 'ans' [38]  (1.66 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

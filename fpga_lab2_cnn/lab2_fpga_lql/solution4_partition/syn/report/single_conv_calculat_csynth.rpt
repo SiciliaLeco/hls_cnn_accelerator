@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'single_conv_calculat'
+================================================================
+* Date:           Sun Dec  6 12:52:27 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution4_partition
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|     27|      0|   459|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|     9|    -|
+|Register         |        -|      -|    961|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|     27|    961|   468|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|     67|      6|     5|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |mul_ln34_1_fu_137_p2  |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_2_fu_151_p2  |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_3_fu_165_p2  |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_4_fu_86_p2   |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_5_fu_100_p2  |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_6_fu_44_p2   |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_7_fu_58_p2   |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_8_fu_72_p2   |     *    |      3|  0|  21|          32|          32|
+    |mul_ln34_fu_123_p2    |     *    |      3|  0|  21|          32|          32|
+    |add_ln34_1_fu_184_p2  |     +    |      0|  0|  39|          32|          32|
+    |add_ln34_2_fu_188_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_3_fu_171_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_4_fu_106_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_5_fu_110_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_6_fu_175_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_7_fu_194_p2  |     +    |      0|  0|  32|          32|          32|
+    |add_ln34_fu_180_p2    |     +    |      0|  0|  39|          32|          32|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |     27|  0| 459|         544|         544|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_return  |   9|          2|   32|         64|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |   9|          2|   32|         64|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+----+----+-----+-----------+
+    |         Name         | FF | LUT| Bits| Const Bits|
+    +----------------------+----+----+-----+-----------+
+    |add_ln34_5_reg_224    |  32|   0|   32|          0|
+    |add_ln34_6_reg_249    |  32|   0|   32|          0|
+    |ap_ce_reg             |   1|   0|    1|          0|
+    |ap_return_int_reg     |  32|   0|   32|          0|
+    |cal_conv_0_0_int_reg  |  32|   0|   32|          0|
+    |cal_conv_0_1_int_reg  |  32|   0|   32|          0|
+    |cal_conv_0_2_int_reg  |  32|   0|   32|          0|
+    |cal_conv_1_0_int_reg  |  32|   0|   32|          0|
+    |cal_conv_1_1_int_reg  |  32|   0|   32|          0|
+    |cal_conv_1_2_int_reg  |  32|   0|   32|          0|
+    |cal_conv_2_0_int_reg  |  32|   0|   32|          0|
+    |cal_conv_2_1_int_reg  |  32|   0|   32|          0|
+    |cal_conv_2_2_int_reg  |  32|   0|   32|          0|
+    |kernel_0_0_int_reg    |  32|   0|   32|          0|
+    |kernel_0_1_int_reg    |  32|   0|   32|          0|
+    |kernel_0_2_int_reg    |  32|   0|   32|          0|
+    |kernel_1_0_int_reg    |  32|   0|   32|          0|
+    |kernel_1_1_int_reg    |  32|   0|   32|          0|
+    |kernel_1_2_int_reg    |  32|   0|   32|          0|
+    |kernel_2_0_int_reg    |  32|   0|   32|          0|
+    |kernel_2_1_int_reg    |  32|   0|   32|          0|
+    |kernel_2_2_int_reg    |  32|   0|   32|          0|
+    |mul_ln34_1_reg_234    |  32|   0|   32|          0|
+    |mul_ln34_2_reg_239    |  32|   0|   32|          0|
+    |mul_ln34_3_reg_244    |  32|   0|   32|          0|
+    |mul_ln34_4_reg_214    |  32|   0|   32|          0|
+    |mul_ln34_5_reg_219    |  32|   0|   32|          0|
+    |mul_ln34_6_reg_199    |  32|   0|   32|          0|
+    |mul_ln34_7_reg_204    |  32|   0|   32|          0|
+    |mul_ln34_8_reg_209    |  32|   0|   32|          0|
+    |mul_ln34_reg_229      |  32|   0|   32|          0|
+    +----------------------+----+----+-----+-----------+
+    |Total                 | 961|   0|  961|          0|
+    +----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+----------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------+-----+-----+------------+----------------------+--------------+
+|ap_clk        |  in |    1| ap_ctrl_hs | single_conv_calculat | return value |
+|ap_rst        |  in |    1| ap_ctrl_hs | single_conv_calculat | return value |
+|ap_return     | out |   32| ap_ctrl_hs | single_conv_calculat | return value |
+|ap_ce         |  in |    1| ap_ctrl_hs | single_conv_calculat | return value |
+|cal_conv_0_0  |  in |   32|   ap_none  |     cal_conv_0_0     |    pointer   |
+|kernel_0_0    |  in |   32|   ap_none  |      kernel_0_0      |    pointer   |
+|cal_conv_0_1  |  in |   32|   ap_none  |     cal_conv_0_1     |    pointer   |
+|kernel_0_1    |  in |   32|   ap_none  |      kernel_0_1      |    pointer   |
+|cal_conv_0_2  |  in |   32|   ap_none  |     cal_conv_0_2     |    pointer   |
+|kernel_0_2    |  in |   32|   ap_none  |      kernel_0_2      |    pointer   |
+|cal_conv_1_0  |  in |   32|   ap_none  |     cal_conv_1_0     |    pointer   |
+|kernel_1_0    |  in |   32|   ap_none  |      kernel_1_0      |    pointer   |
+|cal_conv_1_1  |  in |   32|   ap_none  |     cal_conv_1_1     |    pointer   |
+|kernel_1_1    |  in |   32|   ap_none  |      kernel_1_1      |    pointer   |
+|cal_conv_1_2  |  in |   32|   ap_none  |     cal_conv_1_2     |    pointer   |
+|kernel_1_2    |  in |   32|   ap_none  |      kernel_1_2      |    pointer   |
+|cal_conv_2_0  |  in |   32|   ap_none  |     cal_conv_2_0     |    pointer   |
+|kernel_2_0    |  in |   32|   ap_none  |      kernel_2_0      |    pointer   |
+|cal_conv_2_1  |  in |   32|   ap_none  |     cal_conv_2_1     |    pointer   |
+|kernel_2_1    |  in |   32|   ap_none  |      kernel_2_1      |    pointer   |
+|cal_conv_2_2  |  in |   32|   ap_none  |     cal_conv_2_2     |    pointer   |
+|kernel_2_2    |  in |   32|   ap_none  |      kernel_2_2      |    pointer   |
++--------------+-----+-----+------------+----------------------+--------------+
+

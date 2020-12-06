@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv_line_buffer_shi'
+================================================================
+* Date:           Sun Dec  6 12:05:02 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution2_pipeline
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.152|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   14|   14|   15|   15| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      -|     -|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|   389|    -|
+|Register         |        -|      -|    623|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|    623|   389|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|      3|     4|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  65|         16|    1|         16|
+    |cal_conv_address0          |  44|          9|    4|         36|
+    |cal_conv_address1          |  41|          8|    4|         32|
+    |cal_conv_d0                |  27|          5|   32|        160|
+    |cal_conv_d1                |  21|          4|   32|        128|
+    |conv_line_buffer_address0  |  53|         12|    4|         48|
+    |conv_line_buffer_address1  |  50|         11|    4|         44|
+    |conv_line_buffer_d0        |  44|          9|   32|        288|
+    |conv_line_buffer_d1        |  44|          9|   32|        288|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 389|         83|  145|       1040|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |  15|   0|   15|          0|
+    |ap_port_reg_data                 |  32|   0|   32|          0|
+    |cal_conv_load_11_reg_163         |  32|   0|   32|          0|
+    |cal_conv_load_12_reg_168         |  32|   0|   32|          0|
+    |cal_conv_load_1_reg_146          |  32|   0|   32|          0|
+    |cal_conv_load_reg_141            |  32|   0|   32|          0|
+    |conv_line_buffer_loa_10_reg_203  |  32|   0|   32|          0|
+    |conv_line_buffer_loa_11_reg_208  |  32|   0|   32|          0|
+    |conv_line_buffer_loa_1_reg_157   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_4_reg_173   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_5_reg_178   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_6_reg_183   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_7_reg_188   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_8_reg_193   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_9_reg_198   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_reg_151     |  32|   0|   32|          0|
+    |reg_119                          |  32|   0|   32|          0|
+    |reg_124                          |  32|   0|   32|          0|
+    |reg_129                          |  32|   0|   32|          0|
+    |reg_135                          |  32|   0|   32|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 623|   0|  623|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_done                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_ce                      |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|data                       |  in |   32|   ap_none  |         data         |    scalar    |
+|cal_conv_address0          | out |    4|  ap_memory |       cal_conv       |     array    |
+|cal_conv_ce0               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_we0               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_d0                | out |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_q0                |  in |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_address1          | out |    4|  ap_memory |       cal_conv       |     array    |
+|cal_conv_ce1               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_we1               | out |    1|  ap_memory |       cal_conv       |     array    |
+|cal_conv_d1                | out |   32|  ap_memory |       cal_conv       |     array    |
+|cal_conv_q1                |  in |   32|  ap_memory |       cal_conv       |     array    |
+|conv_line_buffer_address0  | out |    4|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_ce0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_we0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_d0        | out |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_q0        |  in |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_address1  | out |    4|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_ce1       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_we1       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_d1        | out |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_q1        |  in |   32|  ap_memory |   conv_line_buffer   |     array    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+

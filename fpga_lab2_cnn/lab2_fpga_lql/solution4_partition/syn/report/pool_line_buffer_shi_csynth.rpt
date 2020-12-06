@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vivado HLS Report for 'pool_line_buffer_shi'
+================================================================
+* Date:           Sun Dec  6 12:52:29 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution4_partition
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.304|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    5|    5|    6|    6| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      -|     -|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|   188|    -|
+|Register         |        -|      -|    166|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|    166|   188|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|      1|     2|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  38|          7|    1|          7|
+    |cal_pool_address0          |  15|          3|    1|          3|
+    |cal_pool_address1          |  15|          3|    1|          3|
+    |pool_line_buffer_address0  |  33|          6|    3|         18|
+    |pool_line_buffer_address1  |  27|          5|    3|         15|
+    |pool_line_buffer_d0        |  27|          5|   32|        160|
+    |pool_line_buffer_d1        |  15|          3|   32|         96|
+    |reg_71                     |   9|          2|   32|         64|
+    |reg_79                     |   9|          2|   32|         64|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 188|         36|  137|        430|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                      |   6|   0|    6|          0|
+    |ap_port_reg_data               |  32|   0|   32|          0|
+    |go_up_reg_86                   |  32|   0|   32|          0|
+    |pool_line_buffer_loa_3_reg_91  |  32|   0|   32|          0|
+    |reg_71                         |  32|   0|   32|          0|
+    |reg_79                         |  32|   0|   32|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          | 166|   0|  166|          0|
+    +-------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_done                    | out |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|ap_ce                      |  in |    1| ap_ctrl_hs | pool_line_buffer_shi | return value |
+|data                       |  in |   32|   ap_none  |         data         |    scalar    |
+|cal_pool_address0          | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_ce0               | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_we0               | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_d0                | out |    0|  ap_memory |       cal_pool       |     array    |
+|cal_pool_q0                |  in |    0|  ap_memory |       cal_pool       |     array    |
+|cal_pool_address1          | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_ce1               | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_we1               | out |    1|  ap_memory |       cal_pool       |     array    |
+|cal_pool_d1                | out |    0|  ap_memory |       cal_pool       |     array    |
+|cal_pool_q1                |  in |    0|  ap_memory |       cal_pool       |     array    |
+|pool_line_buffer_address0  | out |    3|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_ce0       | out |    1|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_we0       | out |    1|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_d0        | out |   32|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_q0        |  in |   32|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_address1  | out |    3|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_ce1       | out |    1|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_we1       | out |    1|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_d1        | out |   32|  ap_memory |   pool_line_buffer   |     array    |
+|pool_line_buffer_q1        |  in |   32|  ap_memory |   pool_line_buffer   |     array    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+

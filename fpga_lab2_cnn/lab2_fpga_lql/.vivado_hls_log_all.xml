@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cal_pool_1_1' is power-on initialization." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:36.413+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cal_pool_1_0' is power-on initialization." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:36.393+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cal_pool_0_1' is power-on initialization." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:36.372+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cal_pool_0_0' is power-on initialization." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:36.336+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'conv_line_buffer_shift_1_bit' to 'conv_line_buffer_shi' (conv.cpp:58:62)" projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:25.453+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'single_conv_calculate' to 'single_conv_calculat' (conv.cpp:30:54)" projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:21.792+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'conv_line_buffer' in function 'conv_line_buffer_shift_1_bit' (conv.cpp:69:5)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.639+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_conv_test' (conv.cpp:183:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.206+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_conv_test' (conv.cpp:178:8)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.194+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.182+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.170+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.158+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.143+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.128+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.116+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.105+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.093+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.078+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.065+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.052+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.037+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.025+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.012+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:18.001+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_conv' in function 'single_conv_test' (conv.cpp:132:7)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:17.984+0800" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cal_pool' in function 'single_pool_calculate' (conv.cpp:48:5)." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:17.955+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Artix-7/Artix-7'." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:06.107+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado/2019.1/common/technology/xilinx/Artix-7/Artix-7.lib'." projectName="lab2_fpga_lql" solutionName="solution5_unroll_11" date="2020-12-06T13:34:05.329+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cal_conv_2_2' is power-on initialization." projectName="lab2_fpga_lql" solutionName="solution4_partition" date="2020-12-06T12:52:30.744+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv.cpp" path="D:\Desktop\fpga_lab_2\conv.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="conv_test.cpp" path="D:\Desktop\fpga_lab_2\conv_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../conv.cpp in debug mode
+   Generating csim.exe
+*** output comparison ***
+[7296]7296    				[7584]7584    				[7872]7872    				
+[9600]9600    				[9888]9888    				[10176]10176   				
+[11904]11904   				[12192]12192   				[12480]12480   				
+*** TEST PASSED ***
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

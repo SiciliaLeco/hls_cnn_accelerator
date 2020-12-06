@@ -1,0 +1,180 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'single_conv_test'" level="0">
+<item name = "Date">Sun Dec  6 13:34:31 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">lab2_fpga_lql</item>
+<item name = "Solution">solution5_unroll_11</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a12ti-csg325-1L</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.470, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">69641, 202481, 69641, 202481, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_conv_line_buffer_shi_fu_4547">conv_line_buffer_shi, 66, 66, 66, 66, none</column>
+<column name="grp_single_conv_calculat_fu_4557">single_conv_calculat, 43, 43, 43, 43, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- single_conv_test_label9">48, 48, 8, -, -, 6, no</column>
+<column name=" + single_conv_test_label10">6, 6, 1, -, -, 6, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4152, 12396, 692 ~ 2066, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">690, 2064, 115 ~ 344, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="- single_conv_test_label12">128, 128, 2, -, -, 64, no</column>
+<column name="- single_conv_test_label13">18, 18, 2, -, -, 9, no</column>
+<column name="- single_conv_test_label14">36, 36, 18, -, -, 2, no</column>
+<column name=" + single_conv_test_label15">16, 16, 2, -, -, 8, no</column>
+<column name="- single_conv_test_label16">6, 6, 2, -, -, 3, no</column>
+<column name="- single_conv_test_label17">4224, 13404, 704 ~ 2234, -, -, 6, no</column>
+<column name=" + single_conv_test_label18">702, 2232, 117 ~ 372, -, -, 6, no</column>
+<column name="  ++ single_conv_test_label19">210, 339, 70 ~ 113, -, -, 3, no</column>
+<column name="  ++ pool_line_buffer_shift_1_bit_label8">10, 10, 2, -, -, 5, no</column>
+<column name="  ++ single_pool_calculate_label2">15, 15, 5, -, -, 3, no</column>
+<column name="   +++ single_pool_calculate_label3">3, 3, 1, -, -, 3, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

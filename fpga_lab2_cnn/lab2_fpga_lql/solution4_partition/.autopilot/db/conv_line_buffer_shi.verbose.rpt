@@ -1,0 +1,1280 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv_line_buffer_shi'
+================================================================
+* Date:           Sun Dec  6 12:52:28 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lab2_fpga_lql
+* Solution:       solution4_partition
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.152|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |   14|   14|   15|   15| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT | URAM|
++-----------------+---------+-------+-------+------+-----+
+|DSP              |        -|      -|      -|     -|    -|
+|Expression       |        -|      -|      -|     -|    -|
+|FIFO             |        -|      -|      -|     -|    -|
+|Instance         |        -|      -|      -|     -|    -|
+|Memory           |        -|      -|      -|     -|    -|
+|Multiplexer      |        -|      -|      -|   328|    -|
+|Register         |        -|      -|    431|     -|    -|
++-----------------+---------+-------+-------+------+-----+
+|Total            |        0|      0|    431|   328|    0|
++-----------------+---------+-------+-------+------+-----+
+|Available        |       40|     40|  16000|  8000|    0|
++-----------------+---------+-------+-------+------+-----+
+|Utilization (%)  |        0|      0|      2|     4|    0|
++-----------------+---------+-------+-------+------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  65|         16|    1|         16|
+    |cal_conv_0_1_o             |   9|          2|   32|         64|
+    |cal_conv_0_2_o             |   9|          2|   32|         64|
+    |cal_conv_1_0_o             |   9|          2|   32|         64|
+    |cal_conv_1_1_o             |   9|          2|   32|         64|
+    |cal_conv_1_2_o             |   9|          2|   32|         64|
+    |cal_conv_2_0_o             |   9|          2|   32|         64|
+    |cal_conv_2_1_o             |   9|          2|   32|         64|
+    |cal_conv_2_2_o             |   9|          2|   32|         64|
+    |conv_line_buffer_address0  |  53|         12|    4|         48|
+    |conv_line_buffer_address1  |  50|         11|    4|         44|
+    |conv_line_buffer_d0        |  44|          9|   32|        288|
+    |conv_line_buffer_d1        |  44|          9|   32|        288|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 328|         73|  329|       1196|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |  15|   0|   15|          0|
+    |ap_port_reg_data                 |  32|   0|   32|          0|
+    |conv_line_buffer_loa_10_reg_232  |  32|   0|   32|          0|
+    |conv_line_buffer_loa_11_reg_237  |  32|   0|   32|          0|
+    |conv_line_buffer_loa_1_reg_196   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_4_reg_202   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_5_reg_207   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_6_reg_212   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_7_reg_217   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_8_reg_222   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_9_reg_227   |  32|   0|   32|          0|
+    |conv_line_buffer_loa_reg_190     |  32|   0|   32|          0|
+    |reg_92                           |  32|   0|   32|          0|
+    |reg_98                           |  32|   0|   32|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 431|   0|  431|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_done                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|ap_ce                      |  in |    1| ap_ctrl_hs | conv_line_buffer_shi | return value |
+|data                       |  in |   32|   ap_none  |         data         |    scalar    |
+|cal_conv_1_0_i             |  in |   32|   ap_ovld  |     cal_conv_1_0     |    pointer   |
+|cal_conv_1_0_o             | out |   32|   ap_ovld  |     cal_conv_1_0     |    pointer   |
+|cal_conv_1_0_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_1_0     |    pointer   |
+|cal_conv_2_0_i             |  in |   32|   ap_ovld  |     cal_conv_2_0     |    pointer   |
+|cal_conv_2_0_o             | out |   32|   ap_ovld  |     cal_conv_2_0     |    pointer   |
+|cal_conv_2_0_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_2_0     |    pointer   |
+|cal_conv_0_1_i             |  in |   32|   ap_ovld  |     cal_conv_0_1     |    pointer   |
+|cal_conv_0_1_o             | out |   32|   ap_ovld  |     cal_conv_0_1     |    pointer   |
+|cal_conv_0_1_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_0_1     |    pointer   |
+|cal_conv_0_0               | out |   32|   ap_vld   |     cal_conv_0_0     |    pointer   |
+|cal_conv_0_0_ap_vld        | out |    1|   ap_vld   |     cal_conv_0_0     |    pointer   |
+|cal_conv_0_2_i             |  in |   32|   ap_ovld  |     cal_conv_0_2     |    pointer   |
+|cal_conv_0_2_o             | out |   32|   ap_ovld  |     cal_conv_0_2     |    pointer   |
+|cal_conv_0_2_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_0_2     |    pointer   |
+|cal_conv_1_1_i             |  in |   32|   ap_ovld  |     cal_conv_1_1     |    pointer   |
+|cal_conv_1_1_o             | out |   32|   ap_ovld  |     cal_conv_1_1     |    pointer   |
+|cal_conv_1_1_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_1_1     |    pointer   |
+|cal_conv_1_2_i             |  in |   32|   ap_ovld  |     cal_conv_1_2     |    pointer   |
+|cal_conv_1_2_o             | out |   32|   ap_ovld  |     cal_conv_1_2     |    pointer   |
+|cal_conv_1_2_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_1_2     |    pointer   |
+|cal_conv_2_1_i             |  in |   32|   ap_ovld  |     cal_conv_2_1     |    pointer   |
+|cal_conv_2_1_o             | out |   32|   ap_ovld  |     cal_conv_2_1     |    pointer   |
+|cal_conv_2_1_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_2_1     |    pointer   |
+|cal_conv_2_2_i             |  in |   32|   ap_ovld  |     cal_conv_2_2     |    pointer   |
+|cal_conv_2_2_o             | out |   32|   ap_ovld  |     cal_conv_2_2     |    pointer   |
+|cal_conv_2_2_o_ap_vld      | out |    1|   ap_ovld  |     cal_conv_2_2     |    pointer   |
+|conv_line_buffer_address0  | out |    4|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_ce0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_we0       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_d0        | out |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_q0        |  in |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_address1  | out |    4|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_ce1       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_we1       | out |    1|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_d1        | out |   32|  ap_memory |   conv_line_buffer   |     array    |
+|conv_line_buffer_q1        |  in |   32|  ap_memory |   conv_line_buffer   |     array    |
++---------------------------+-----+-----+------------+----------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 15, depth = 15
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 1
+  Pipeline-0 : II = 15, D = 15, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.15>
+ST_1 : Operation 16 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 3), align 4" [conv.cpp:69]   --->   Operation 16 'load' 'conv_line_buffer_loa' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 17 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_1 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 11), align 4" [conv.cpp:69]   --->   Operation 17 'load' 'conv_line_buffer_loa_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 2 <SV = 1> <Delay = 2.15>
+ST_2 : Operation 18 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 3), align 4" [conv.cpp:69]   --->   Operation 18 'load' 'conv_line_buffer_loa' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 19 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_1 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 11), align 4" [conv.cpp:69]   --->   Operation 19 'load' 'conv_line_buffer_loa_1' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 20 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_2 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 1), align 4" [conv.cpp:82]   --->   Operation 20 'load' 'conv_line_buffer_loa_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_2 : Operation 21 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_3 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 2), align 8" [conv.cpp:82]   --->   Operation 21 'load' 'conv_line_buffer_loa_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 3 <SV = 2> <Delay = 2.15>
+ST_3 : Operation 22 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_2 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 1), align 4" [conv.cpp:82]   --->   Operation 22 'load' 'conv_line_buffer_loa_2' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_3 : Operation 23 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_3 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 2), align 8" [conv.cpp:82]   --->   Operation 23 'load' 'conv_line_buffer_loa_3' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_3 : Operation 24 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_4 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 4), align 16" [conv.cpp:82]   --->   Operation 24 'load' 'conv_line_buffer_loa_4' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_3 : Operation 25 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_5 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 5), align 4" [conv.cpp:82]   --->   Operation 25 'load' 'conv_line_buffer_loa_5' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 4 <SV = 3> <Delay = 2.15>
+ST_4 : Operation 26 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_4 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 4), align 16" [conv.cpp:82]   --->   Operation 26 'load' 'conv_line_buffer_loa_4' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_4 : Operation 27 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_5 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 5), align 4" [conv.cpp:82]   --->   Operation 27 'load' 'conv_line_buffer_loa_5' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_4 : Operation 28 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_6 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 6), align 8" [conv.cpp:82]   --->   Operation 28 'load' 'conv_line_buffer_loa_6' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_4 : Operation 29 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_7 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 7), align 4" [conv.cpp:82]   --->   Operation 29 'load' 'conv_line_buffer_loa_7' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 5 <SV = 4> <Delay = 2.15>
+ST_5 : Operation 30 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_6 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 6), align 8" [conv.cpp:82]   --->   Operation 30 'load' 'conv_line_buffer_loa_6' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_5 : Operation 31 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_7 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 7), align 4" [conv.cpp:82]   --->   Operation 31 'load' 'conv_line_buffer_loa_7' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_5 : Operation 32 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_8 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 9), align 4" [conv.cpp:82]   --->   Operation 32 'load' 'conv_line_buffer_loa_8' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_5 : Operation 33 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_9 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 10), align 8" [conv.cpp:82]   --->   Operation 33 'load' 'conv_line_buffer_loa_9' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 6 <SV = 5> <Delay = 2.15>
+ST_6 : Operation 34 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_8 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 9), align 4" [conv.cpp:82]   --->   Operation 34 'load' 'conv_line_buffer_loa_8' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_6 : Operation 35 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_9 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 10), align 8" [conv.cpp:82]   --->   Operation 35 'load' 'conv_line_buffer_loa_9' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_6 : Operation 36 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_10 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 12), align 16" [conv.cpp:82]   --->   Operation 36 'load' 'conv_line_buffer_loa_10' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_6 : Operation 37 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_11 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 13), align 4" [conv.cpp:82]   --->   Operation 37 'load' 'conv_line_buffer_loa_11' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 7 <SV = 6> <Delay = 2.15>
+ST_7 : Operation 38 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_10 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 12), align 16" [conv.cpp:82]   --->   Operation 38 'load' 'conv_line_buffer_loa_10' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_7 : Operation 39 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_11 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 13), align 4" [conv.cpp:82]   --->   Operation 39 'load' 'conv_line_buffer_loa_11' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_7 : Operation 40 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_12 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 14), align 8" [conv.cpp:82]   --->   Operation 40 'load' 'conv_line_buffer_loa_12' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_7 : Operation 41 [2/2] (2.15ns)   --->   "%conv_line_buffer_loa_13 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 15), align 4" [conv.cpp:82]   --->   Operation 41 'load' 'conv_line_buffer_loa_13' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 8 <SV = 7> <Delay = 2.15>
+ST_8 : Operation 42 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_2, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 0), align 16" [conv.cpp:82]   --->   Operation 42 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_8 : Operation 43 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_3, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 1), align 4" [conv.cpp:82]   --->   Operation 43 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_8 : Operation 44 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_12 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 14), align 8" [conv.cpp:82]   --->   Operation 44 'load' 'conv_line_buffer_loa_12' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_8 : Operation 45 [1/2] (2.15ns)   --->   "%conv_line_buffer_loa_13 = load i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 15), align 4" [conv.cpp:82]   --->   Operation 45 'load' 'conv_line_buffer_loa_13' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 9 <SV = 8> <Delay = 2.15>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%cal_conv_0_1_load = load i32* @cal_conv_0_1, align 4" [conv.cpp:67]   --->   Operation 46 'load' 'cal_conv_0_1_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "store i32 %cal_conv_0_1_load, i32* @cal_conv_0_0, align 16" [conv.cpp:67]   --->   Operation 47 'store' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%cal_conv_0_2_load = load i32* @cal_conv_0_2, align 8" [conv.cpp:67]   --->   Operation 48 'load' 'cal_conv_0_2_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [1/1] (0.00ns)   --->   "store i32 %cal_conv_0_2_load, i32* @cal_conv_0_1, align 4" [conv.cpp:67]   --->   Operation 49 'store' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "store i32 %conv_line_buffer_loa, i32* @cal_conv_0_2, align 8" [conv.cpp:69]   --->   Operation 50 'store' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 2), align 8" [conv.cpp:82]   --->   Operation 51 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_9 : Operation 52 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_4, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 3), align 4" [conv.cpp:82]   --->   Operation 52 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 10 <SV = 9> <Delay = 2.15>
+ST_10 : Operation 53 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_5, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 4), align 16" [conv.cpp:82]   --->   Operation 53 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_10 : Operation 54 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_6, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 5), align 4" [conv.cpp:82]   --->   Operation 54 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 11 <SV = 10> <Delay = 2.15>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%cal_conv_1_0_load = load i32* @cal_conv_1_0, align 4" [conv.cpp:58]   --->   Operation 55 'load' 'cal_conv_1_0_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 56 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_7, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 6), align 8" [conv.cpp:82]   --->   Operation 56 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_11 : Operation 57 [1/1] (2.15ns)   --->   "store i32 %cal_conv_1_0_load, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 7), align 4" [conv.cpp:80]   --->   Operation 57 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 12 <SV = 11> <Delay = 2.15>
+ST_12 : Operation 58 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_8, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 8), align 16" [conv.cpp:82]   --->   Operation 58 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_12 : Operation 59 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_9, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 9), align 4" [conv.cpp:82]   --->   Operation 59 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 13 <SV = 12> <Delay = 2.15>
+ST_13 : Operation 60 [1/1] (0.00ns)   --->   "%cal_conv_1_1_load = load i32* @cal_conv_1_1, align 4" [conv.cpp:67]   --->   Operation 60 'load' 'cal_conv_1_1_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "store i32 %cal_conv_1_1_load, i32* @cal_conv_1_0, align 4" [conv.cpp:67]   --->   Operation 61 'store' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 62 [1/1] (0.00ns)   --->   "%cal_conv_1_2_load = load i32* @cal_conv_1_2, align 4" [conv.cpp:67]   --->   Operation 62 'load' 'cal_conv_1_2_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 63 [1/1] (0.00ns)   --->   "store i32 %cal_conv_1_2_load, i32* @cal_conv_1_1, align 4" [conv.cpp:67]   --->   Operation 63 'store' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 64 [1/1] (0.00ns)   --->   "store i32 %conv_line_buffer_loa_1, i32* @cal_conv_1_2, align 4" [conv.cpp:69]   --->   Operation 64 'store' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 65 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_1, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 10), align 8" [conv.cpp:82]   --->   Operation 65 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_13 : Operation 66 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_10, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 11), align 4" [conv.cpp:82]   --->   Operation 66 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 14 <SV = 13> <Delay = 2.15>
+ST_14 : Operation 67 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_11, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 12), align 16" [conv.cpp:82]   --->   Operation 67 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_14 : Operation 68 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_12, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 13), align 4" [conv.cpp:82]   --->   Operation 68 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+
+State 15 <SV = 14> <Delay = 2.15>
+ST_15 : Operation 69 [1/1] (0.00ns)   --->   "%data_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %data) nounwind" [conv.cpp:54]   --->   Operation 69 'read' 'data_read' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 70 [1/1] (0.00ns)   --->   "%cal_conv_2_0_load = load i32* @cal_conv_2_0, align 8" [conv.cpp:59]   --->   Operation 70 'load' 'cal_conv_2_0_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 71 [1/1] (0.00ns)   --->   "%cal_conv_2_1_load = load i32* @cal_conv_2_1, align 4" [conv.cpp:67]   --->   Operation 71 'load' 'cal_conv_2_1_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 72 [1/1] (0.00ns)   --->   "store i32 %cal_conv_2_1_load, i32* @cal_conv_2_0, align 8" [conv.cpp:67]   --->   Operation 72 'store' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 73 [1/1] (0.00ns)   --->   "%cal_conv_2_2_load = load i32* @cal_conv_2_2, align 8" [conv.cpp:67]   --->   Operation 73 'load' 'cal_conv_2_2_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 74 [1/1] (0.00ns)   --->   "store i32 %cal_conv_2_2_load, i32* @cal_conv_2_1, align 4" [conv.cpp:67]   --->   Operation 74 'store' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 75 [1/1] (0.00ns)   --->   "store i32 %data_read, i32* @cal_conv_2_2, align 8" [conv.cpp:71]   --->   Operation 75 'store' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 76 [1/1] (2.15ns)   --->   "store i32 %conv_line_buffer_loa_13, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 14), align 8" [conv.cpp:82]   --->   Operation 76 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_15 : Operation 77 [1/1] (2.15ns)   --->   "store i32 %cal_conv_2_0_load, i32* getelementptr inbounds ([16 x i32]* @conv_line_buffer, i64 0, i64 15), align 4" [conv.cpp:80]   --->   Operation 77 'store' <Predicate = true> <Delay = 2.15> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_15 : Operation 78 [1/1] (0.00ns)   --->   "ret void" [conv.cpp:86]   --->   Operation 78 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ data]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ cal_conv_1_0]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_2_0]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_0_1]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_0_0]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_vld:ce=0
+Port [ cal_conv_0_2]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_1_1]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_1_2]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_2_1]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ cal_conv_2_2]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ conv_line_buffer]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[22]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+conv_line_buffer_loa    (load ) [ 0001111111000000]
+conv_line_buffer_loa_1  (load ) [ 0001111111111100]
+conv_line_buffer_loa_2  (load ) [ 0000111110000000]
+conv_line_buffer_loa_3  (load ) [ 0000111110000000]
+conv_line_buffer_loa_4  (load ) [ 0000011111000000]
+conv_line_buffer_loa_5  (load ) [ 0000011111100000]
+conv_line_buffer_loa_6  (load ) [ 0000001111100000]
+conv_line_buffer_loa_7  (load ) [ 0000001111110000]
+conv_line_buffer_loa_8  (load ) [ 0000000111111000]
+conv_line_buffer_loa_9  (load ) [ 0000000111111000]
+conv_line_buffer_loa_10 (load ) [ 0000000011111100]
+conv_line_buffer_loa_11 (load ) [ 0000000011111110]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+conv_line_buffer_loa_12 (load ) [ 0000000001111110]
+conv_line_buffer_loa_13 (load ) [ 0000000001111111]
+cal_conv_0_1_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+cal_conv_0_2_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+store_ln69              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+cal_conv_1_0_load       (load ) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln80              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+cal_conv_1_1_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+cal_conv_1_2_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+store_ln69              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+data_read               (read ) [ 0000000000000000]
+cal_conv_2_0_load       (load ) [ 0000000000000000]
+cal_conv_2_1_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+cal_conv_2_2_load       (load ) [ 0000000000000000]
+store_ln67              (store) [ 0000000000000000]
+store_ln71              (store) [ 0000000000000000]
+store_ln82              (store) [ 0000000000000000]
+store_ln80              (store) [ 0000000000000000]
+ret_ln86                (ret  ) [ 0000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="data">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="data"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="cal_conv_1_0">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_1_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="cal_conv_2_0">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_2_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="cal_conv_0_1">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_0_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="cal_conv_0_0">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_0_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="cal_conv_0_2">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_0_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="cal_conv_1_1">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_1_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="cal_conv_1_2">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_1_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="cal_conv_2_1">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_2_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="cal_conv_2_2">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cal_conv_2_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="conv_line_buffer">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="conv_line_buffer"/><MemPortTyVec>2 2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="data_read_read_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="32" slack="0"/>
+<pin id="58" dir="0" index="1" bw="32" slack="0"/>
+<pin id="59" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="data_read/15 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="grp_access_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="32" slack="0"/>
+<pin id="64" dir="0" index="1" bw="32" slack="5"/>
+<pin id="65" dir="0" index="2" bw="0" slack="0"/>
+<pin id="68" dir="0" index="4" bw="32" slack="0"/>
+<pin id="69" dir="0" index="5" bw="32" slack="2147483647"/>
+<pin id="70" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="66" dir="1" index="3" bw="32" slack="5"/>
+<pin id="71" dir="1" index="7" bw="32" slack="5"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="conv_line_buffer_loa/1 conv_line_buffer_loa_1/1 conv_line_buffer_loa_2/2 conv_line_buffer_loa_3/2 conv_line_buffer_loa_4/3 conv_line_buffer_loa_5/3 conv_line_buffer_loa_6/4 conv_line_buffer_loa_7/4 conv_line_buffer_loa_8/5 conv_line_buffer_loa_9/5 conv_line_buffer_loa_10/6 conv_line_buffer_loa_11/6 conv_line_buffer_loa_12/7 conv_line_buffer_loa_13/7 store_ln82/8 store_ln82/8 store_ln82/9 store_ln82/9 store_ln82/10 store_ln82/10 store_ln82/11 store_ln80/11 store_ln82/12 store_ln82/12 store_ln82/13 store_ln82/13 store_ln82/14 store_ln82/14 store_ln82/15 store_ln80/15 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1005" name="reg_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="32" slack="5"/>
+<pin id="94" dir="1" index="1" bw="32" slack="5"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_2 conv_line_buffer_loa_12 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1005" name="reg_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="32" slack="5"/>
+<pin id="100" dir="1" index="1" bw="32" slack="5"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_3 conv_line_buffer_loa_13 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="cal_conv_0_1_load_load_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="32" slack="0"/>
+<pin id="106" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_0_1_load/9 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="store_ln67_store_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="32" slack="0"/>
+<pin id="110" dir="0" index="1" bw="32" slack="0"/>
+<pin id="111" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/9 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="cal_conv_0_2_load_load_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="32" slack="0"/>
+<pin id="116" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_0_2_load/9 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="store_ln67_store_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="32" slack="0"/>
+<pin id="120" dir="0" index="1" bw="32" slack="0"/>
+<pin id="121" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/9 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="store_ln69_store_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="32" slack="7"/>
+<pin id="126" dir="0" index="1" bw="32" slack="0"/>
+<pin id="127" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln69/9 "/>
+</bind>
+</comp>
+
+<comp id="129" class="1004" name="cal_conv_1_0_load_load_fu_129">
+<pin_list>
+<pin id="130" dir="0" index="0" bw="32" slack="0"/>
+<pin id="131" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_1_0_load/11 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="cal_conv_1_1_load_load_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="32" slack="0"/>
+<pin id="136" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_1_1_load/13 "/>
+</bind>
+</comp>
+
+<comp id="138" class="1004" name="store_ln67_store_fu_138">
+<pin_list>
+<pin id="139" dir="0" index="0" bw="32" slack="0"/>
+<pin id="140" dir="0" index="1" bw="32" slack="0"/>
+<pin id="141" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/13 "/>
+</bind>
+</comp>
+
+<comp id="144" class="1004" name="cal_conv_1_2_load_load_fu_144">
+<pin_list>
+<pin id="145" dir="0" index="0" bw="32" slack="0"/>
+<pin id="146" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_1_2_load/13 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="store_ln67_store_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="32" slack="0"/>
+<pin id="150" dir="0" index="1" bw="32" slack="0"/>
+<pin id="151" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/13 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="store_ln69_store_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="32" slack="11"/>
+<pin id="156" dir="0" index="1" bw="32" slack="0"/>
+<pin id="157" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln69/13 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="cal_conv_2_0_load_load_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="32" slack="0"/>
+<pin id="161" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_2_0_load/15 "/>
+</bind>
+</comp>
+
+<comp id="164" class="1004" name="cal_conv_2_1_load_load_fu_164">
+<pin_list>
+<pin id="165" dir="0" index="0" bw="32" slack="0"/>
+<pin id="166" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_2_1_load/15 "/>
+</bind>
+</comp>
+
+<comp id="168" class="1004" name="store_ln67_store_fu_168">
+<pin_list>
+<pin id="169" dir="0" index="0" bw="32" slack="0"/>
+<pin id="170" dir="0" index="1" bw="32" slack="0"/>
+<pin id="171" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/15 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="cal_conv_2_2_load_load_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="32" slack="0"/>
+<pin id="176" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="cal_conv_2_2_load/15 "/>
+</bind>
+</comp>
+
+<comp id="178" class="1004" name="store_ln67_store_fu_178">
+<pin_list>
+<pin id="179" dir="0" index="0" bw="32" slack="0"/>
+<pin id="180" dir="0" index="1" bw="32" slack="0"/>
+<pin id="181" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln67/15 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="store_ln71_store_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="32" slack="0"/>
+<pin id="186" dir="0" index="1" bw="32" slack="0"/>
+<pin id="187" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln71/15 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1005" name="conv_line_buffer_loa_reg_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="32" slack="7"/>
+<pin id="192" dir="1" index="1" bw="32" slack="7"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa "/>
+</bind>
+</comp>
+
+<comp id="196" class="1005" name="conv_line_buffer_loa_1_reg_196">
+<pin_list>
+<pin id="197" dir="0" index="0" bw="32" slack="11"/>
+<pin id="198" dir="1" index="1" bw="32" slack="11"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_1 "/>
+</bind>
+</comp>
+
+<comp id="202" class="1005" name="conv_line_buffer_loa_4_reg_202">
+<pin_list>
+<pin id="203" dir="0" index="0" bw="32" slack="5"/>
+<pin id="204" dir="1" index="1" bw="32" slack="5"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_4 "/>
+</bind>
+</comp>
+
+<comp id="207" class="1005" name="conv_line_buffer_loa_5_reg_207">
+<pin_list>
+<pin id="208" dir="0" index="0" bw="32" slack="6"/>
+<pin id="209" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_5 "/>
+</bind>
+</comp>
+
+<comp id="212" class="1005" name="conv_line_buffer_loa_6_reg_212">
+<pin_list>
+<pin id="213" dir="0" index="0" bw="32" slack="5"/>
+<pin id="214" dir="1" index="1" bw="32" slack="5"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_6 "/>
+</bind>
+</comp>
+
+<comp id="217" class="1005" name="conv_line_buffer_loa_7_reg_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="32" slack="6"/>
+<pin id="219" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_7 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1005" name="conv_line_buffer_loa_8_reg_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="32" slack="6"/>
+<pin id="224" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_8 "/>
+</bind>
+</comp>
+
+<comp id="227" class="1005" name="conv_line_buffer_loa_9_reg_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="32" slack="6"/>
+<pin id="229" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_9 "/>
+</bind>
+</comp>
+
+<comp id="232" class="1005" name="conv_line_buffer_loa_10_reg_232">
+<pin_list>
+<pin id="233" dir="0" index="0" bw="32" slack="6"/>
+<pin id="234" dir="1" index="1" bw="32" slack="6"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_10 "/>
+</bind>
+</comp>
+
+<comp id="237" class="1005" name="conv_line_buffer_loa_11_reg_237">
+<pin_list>
+<pin id="238" dir="0" index="0" bw="32" slack="7"/>
+<pin id="239" dir="1" index="1" bw="32" slack="7"/>
+</pin_list>
+<bind>
+<opset="conv_line_buffer_loa_11 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="60"><net_src comp="54" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="61"><net_src comp="0" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="67"><net_src comp="22" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="72"><net_src comp="24" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="73"><net_src comp="26" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="74"><net_src comp="28" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="75"><net_src comp="30" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="76"><net_src comp="32" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="77"><net_src comp="34" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="78"><net_src comp="36" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="79"><net_src comp="38" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="80"><net_src comp="40" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="81"><net_src comp="42" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="82"><net_src comp="44" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="83"><net_src comp="46" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="84"><net_src comp="48" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="85"><net_src comp="50" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="86"><net_src comp="26" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="87"><net_src comp="28" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="88"><net_src comp="22" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="89"><net_src comp="52" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="90"><net_src comp="38" pin="0"/><net_sink comp="62" pin=2"/></net>
+
+<net id="91"><net_src comp="40" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="95"><net_src comp="62" pin="3"/><net_sink comp="92" pin=0"/></net>
+
+<net id="96"><net_src comp="92" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="97"><net_src comp="92" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="101"><net_src comp="62" pin="7"/><net_sink comp="98" pin=0"/></net>
+
+<net id="102"><net_src comp="98" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="103"><net_src comp="98" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="107"><net_src comp="6" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="112"><net_src comp="104" pin="1"/><net_sink comp="108" pin=0"/></net>
+
+<net id="113"><net_src comp="8" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="117"><net_src comp="10" pin="0"/><net_sink comp="114" pin=0"/></net>
+
+<net id="122"><net_src comp="114" pin="1"/><net_sink comp="118" pin=0"/></net>
+
+<net id="123"><net_src comp="6" pin="0"/><net_sink comp="118" pin=1"/></net>
+
+<net id="128"><net_src comp="10" pin="0"/><net_sink comp="124" pin=1"/></net>
+
+<net id="132"><net_src comp="2" pin="0"/><net_sink comp="129" pin=0"/></net>
+
+<net id="133"><net_src comp="129" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="137"><net_src comp="12" pin="0"/><net_sink comp="134" pin=0"/></net>
+
+<net id="142"><net_src comp="134" pin="1"/><net_sink comp="138" pin=0"/></net>
+
+<net id="143"><net_src comp="2" pin="0"/><net_sink comp="138" pin=1"/></net>
+
+<net id="147"><net_src comp="14" pin="0"/><net_sink comp="144" pin=0"/></net>
+
+<net id="152"><net_src comp="144" pin="1"/><net_sink comp="148" pin=0"/></net>
+
+<net id="153"><net_src comp="12" pin="0"/><net_sink comp="148" pin=1"/></net>
+
+<net id="158"><net_src comp="14" pin="0"/><net_sink comp="154" pin=1"/></net>
+
+<net id="162"><net_src comp="4" pin="0"/><net_sink comp="159" pin=0"/></net>
+
+<net id="163"><net_src comp="159" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="167"><net_src comp="16" pin="0"/><net_sink comp="164" pin=0"/></net>
+
+<net id="172"><net_src comp="164" pin="1"/><net_sink comp="168" pin=0"/></net>
+
+<net id="173"><net_src comp="4" pin="0"/><net_sink comp="168" pin=1"/></net>
+
+<net id="177"><net_src comp="18" pin="0"/><net_sink comp="174" pin=0"/></net>
+
+<net id="182"><net_src comp="174" pin="1"/><net_sink comp="178" pin=0"/></net>
+
+<net id="183"><net_src comp="16" pin="0"/><net_sink comp="178" pin=1"/></net>
+
+<net id="188"><net_src comp="56" pin="2"/><net_sink comp="184" pin=0"/></net>
+
+<net id="189"><net_src comp="18" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="193"><net_src comp="62" pin="3"/><net_sink comp="190" pin=0"/></net>
+
+<net id="194"><net_src comp="190" pin="1"/><net_sink comp="124" pin=0"/></net>
+
+<net id="195"><net_src comp="190" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="199"><net_src comp="62" pin="7"/><net_sink comp="196" pin=0"/></net>
+
+<net id="200"><net_src comp="196" pin="1"/><net_sink comp="154" pin=0"/></net>
+
+<net id="201"><net_src comp="196" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="205"><net_src comp="62" pin="3"/><net_sink comp="202" pin=0"/></net>
+
+<net id="206"><net_src comp="202" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="210"><net_src comp="62" pin="7"/><net_sink comp="207" pin=0"/></net>
+
+<net id="211"><net_src comp="207" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="215"><net_src comp="62" pin="3"/><net_sink comp="212" pin=0"/></net>
+
+<net id="216"><net_src comp="212" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="220"><net_src comp="62" pin="7"/><net_sink comp="217" pin=0"/></net>
+
+<net id="221"><net_src comp="217" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="225"><net_src comp="62" pin="3"/><net_sink comp="222" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+<net id="230"><net_src comp="62" pin="7"/><net_sink comp="227" pin=0"/></net>
+
+<net id="231"><net_src comp="227" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="235"><net_src comp="62" pin="3"/><net_sink comp="232" pin=0"/></net>
+
+<net id="236"><net_src comp="232" pin="1"/><net_sink comp="62" pin=4"/></net>
+
+<net id="240"><net_src comp="62" pin="7"/><net_sink comp="237" pin=0"/></net>
+
+<net id="241"><net_src comp="237" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: data | {}
+	Port: cal_conv_1_0 | {13 }
+	Port: cal_conv_2_0 | {15 }
+	Port: cal_conv_0_1 | {9 }
+	Port: cal_conv_0_0 | {9 }
+	Port: cal_conv_0_2 | {9 }
+	Port: cal_conv_1_1 | {13 }
+	Port: cal_conv_1_2 | {13 }
+	Port: cal_conv_2_1 | {15 }
+	Port: cal_conv_2_2 | {15 }
+	Port: conv_line_buffer | {8 9 10 11 12 13 14 15 }
+ - Input state : 
+	Port: conv_line_buffer_shi : data | {15 }
+	Port: conv_line_buffer_shi : cal_conv_1_0 | {11 }
+	Port: conv_line_buffer_shi : cal_conv_2_0 | {15 }
+	Port: conv_line_buffer_shi : cal_conv_0_1 | {9 }
+	Port: conv_line_buffer_shi : cal_conv_0_0 | {}
+	Port: conv_line_buffer_shi : cal_conv_0_2 | {9 }
+	Port: conv_line_buffer_shi : cal_conv_1_1 | {13 }
+	Port: conv_line_buffer_shi : cal_conv_1_2 | {13 }
+	Port: conv_line_buffer_shi : cal_conv_2_1 | {15 }
+	Port: conv_line_buffer_shi : cal_conv_2_2 | {15 }
+	Port: conv_line_buffer_shi : conv_line_buffer | {1 2 3 4 5 6 7 8 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+		store_ln67 : 1
+		store_ln67 : 1
+	State 10
+	State 11
+		store_ln80 : 1
+	State 12
+	State 13
+		store_ln67 : 1
+		store_ln67 : 1
+	State 14
+	State 15
+		store_ln67 : 1
+		store_ln67 : 1
+		store_ln80 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------|
+| Operation|    Functional Unit   |
+|----------|----------------------|
+|   read   | data_read_read_fu_56 |
+|----------|----------------------|
+|   Total  |                      |
+|----------|----------------------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------------+--------+
+|                               |   FF   |
++-------------------------------+--------+
+|conv_line_buffer_loa_10_reg_232|   32   |
+|conv_line_buffer_loa_11_reg_237|   32   |
+| conv_line_buffer_loa_1_reg_196|   32   |
+| conv_line_buffer_loa_4_reg_202|   32   |
+| conv_line_buffer_loa_5_reg_207|   32   |
+| conv_line_buffer_loa_6_reg_212|   32   |
+| conv_line_buffer_loa_7_reg_217|   32   |
+| conv_line_buffer_loa_8_reg_222|   32   |
+| conv_line_buffer_loa_9_reg_227|   32   |
+|  conv_line_buffer_loa_reg_190 |   32   |
+|             reg_92            |   32   |
+|             reg_98            |   32   |
++-------------------------------+--------+
+|             Total             |   384  |
++-------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_62 |  p0  |  11  |  32  |   352  ||    21   |
+| grp_access_fu_62 |  p1  |   8  |  32  |   256  ||    41   |
+| grp_access_fu_62 |  p2  |  10  |   0  |    0   ||    21   |
+| grp_access_fu_62 |  p4  |   8  |  32  |   256  ||    41   |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   864  ||  7.7035 ||   124   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    -   |    -   |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    7   |    -   |   124  |
+|  Register |    -   |   384  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    7   |   384  |   124  |
++-----------+--------+--------+--------+
